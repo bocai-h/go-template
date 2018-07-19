@@ -1,0 +1,24 @@
+default: &default
+  adapter: mysql
+  pool: <%= ENV.fetch("MYSQL_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  host: 127.0.0.1
+  port: 3306
+  passwd: <%= ENV.fetch("MYSQL_PASSWD") {"root"} %>
+  database: secret_manager_db
+
+test:
+  <<: *default
+  host: 127.0.0.1
+  port: 3306
+  passwd: <%= ENV.fetch("MYSQL_PASSWD") {"root"} %>
+  database: secret_manager_db_test
+production:
+  <<: *default
+  host: 127.0.0.1
+  port: 3306
+  passwd: <%= ENV.fetch("MYSQL_PASSWD") %>
+  database: secret_manager_db_pro
