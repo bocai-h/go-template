@@ -1,0 +1,6 @@
+package: wx-gitlab.xunlei.cn/Nebula/secret_manager
+import:
+- package: github.com/smallnest/rpcx.git
+  version: ~3.1.0-release
+- package: github.com/golang/protobuf.git
+  version: ~1.1.0
