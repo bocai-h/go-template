@@ -1,0 +1,1 @@
+/home/bocai/xunlei/go/src/wx-gitlab.xunlei.cn/Nebula/secret_manager/main.go
